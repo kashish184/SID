@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans+Condensed:wght@300&display=swap");
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.5)),
+    url("https://i.pinimg.com/originals/88/d2/54/88d25452dcdac250c848e3f3974484fe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  color: WHITE;
+  font-family: "Open Sans Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+body * {
+  z-index: 1;
+}
+h1 {
+  font-size: 60px;
+  margin: -80px 0 40px;
+  font-family: "Lobster", cursive;
+}
+.countdown {
+  /* display: flex; */
+  display: none;
+  transform: scale(2);
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.time h2 {
+  margin: 0 0 5px;
+}
+
+.year {
+  font-size: 200px;
+  z-index: 1;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+.sign {
+  font-family: "Lobster", cursive;
+  color: #d63447;
+  font-size: 2em;
+  text-shadow: 0 0 0.6rem #d63447, 0 0 1.5rem #f6eedf,
+    -0.2rem 0.1rem 1rem #f6eedf, 0.2rem 0.1rem 1rem #d63447,
+    0 -0.5rem 2rem #f6eedf, 0 0.5rem 3rem #d63447;
+
+  animation: rotate 0.5s 0.5s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time small {
+    font-size: 10px;
+  }
+}
